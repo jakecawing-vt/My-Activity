@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loops Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border: none;
+      background: #333;
+      color: white;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #555;
+    }
+
+    #output {
+      margin-top: 20px;
+      background: black;
+      color: lime;
+      padding: 15px;
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      min-height: 150px;
+      white-space: pre-wrap;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Loops Demo</h2>
+
+<button onclick="forLoop()">For Loop</button>
+<button onclick="whileLoop()">While Loop</button>
+<button onclick="doWhileLoop()">Do While</button>
+<button onclick="forOfLoop()">For Of</button>
+<button onclick="forInLoop()">For In</button>
+<button onclick="forEachLoop()">ForEach</button>
+
+<pre id="output">Click a button...</pre>
+
+<script>
+const output = document.getElementById("output");
+
+function clearOutput(title) {
+  output.textContent = title + "\n----------------\n";
+}
+
+function forLoop() {
+  clearOutput("FOR LOOP");
+  for (let i = 1; i <= 5; i++) {
+    output.textContent += "Count: " + i + "\n";
+  }
+}
+
+function whileLoop() {
+  clearOutput("WHILE LOOP");
+  let i = 1;
+  while (i <= 5) {
+    output.textContent += "Count: " + i + "\n";
+    i++;
+  }
+}
+
+function doWhileLoop() {
+  clearOutput("DO...WHILE LOOP");
+  let i = 1;
+  do {
+    output.textContent += "Count: " + i + "\n";
+    i++;
+  } while (i <= 5);
+}
+
+function forOfLoop() {
+  clearOutput("FOR...OF LOOP");
+  const fruits = ["Apple", "Banana", "Mango"];
+  for (const fruit of fruits) {
+    output.textContent += fruit + "\n";
+  }
+}
+
+function forInLoop() {
+  clearOutput("FOR...IN LOOP");
+  const person = {
+    name: "jake awing",
+    age: 20,
+    course: "IT"
+  };
+
+  for (const key in person) {
+    output.textContent += key + ": " + person[key] + "\n";
+  }
+}
+
+function forEachLoop() {
+  clearOutput("FOREACH LOOP");
+  const numbers = [10, 20, 30];
+
+  numbers.forEach(function(num, index) {
+    output.textContent += "Index " + index + ": " + num + "\n";
+  });
+}
+</script>
+
+</body>
+</html>
