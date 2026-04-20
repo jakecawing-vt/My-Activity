@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <button id="showPresent">Show Present</button>
+            <button id="showAbsent">Show Absent</button>
+            <button id="showPassed">Show Passed</button>
+            <button id="showFailed">Show Failed</button>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button id="searchButton">Search</button>
+            </div>
+        </div>
+
+        <table id="gradesTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>G1</th>
+                    <th>G2</th>
+                    <th>G3</th>
+                    <th>Ave</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Student data will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="grade.js"></script>
+</body>
+</html>
+
